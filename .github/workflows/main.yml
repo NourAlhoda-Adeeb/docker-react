@@ -16,4 +16,4 @@ jobs:
         run: docker build -t nouralhodaadeeb/docker-react -f Dockerfile.dev .
 
       - name: Run tests
-        run: docker run nouralhodaadeeb/docker-react npm run test -- --coverage
+        run: docker run -e CI=true nouralhodaadeeb/docker-react npm run test -- --coverage
